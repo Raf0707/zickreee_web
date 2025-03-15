@@ -16,10 +16,9 @@ import About from "./pages/About.tsx";
 
 const App = () => {
     return (
-        <Router basename="/zickreee_web"> {/* Добавил basename */}
+        <Router /*basename="/zickreee_web"*/> {/* Добавил basename */}
             {/* Toolbar отображается на всех экранах */}
             <Toolbar />
-
             {/* Основной контент */}
             <div className="pt-16"> {/* Отступ сверху, чтобы контент не перекрывался Toolbar */}
                 <Routes>
