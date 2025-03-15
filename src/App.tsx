@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AllahNames from "./pages/AllahNames";
+import Salavats from "./pages/Salavats";
+import Istigfars from "./pages/Istigfars";
+import DuaForReachness from "./pages/DuaForReachness";
+import MorningAndEveningAzkars from "./pages/MorningAndEveningAzkars";
+import DuaIsmulAzam from "./pages/DuaIsmulAzam";
+import DuaRasul from "./pages/DuaRasul";
+import Toolbar from "./components/Toolbar.tsx";
+import About from "./pages/About.tsx";
+//import bridge from "@vkontakte/vk-bridge";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Отправляет событие инициализации нативному клиенту
+//bridge.send("VKWebAppInit");
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => {
+    return (
+        <Router basename="/zickreee_web"> {/* Добавил basename */}
+            {/* Toolbar отображается на всех экранах */}
+            <Toolbar />
 
-export default App
+            {/* Основной контент */}
+            <div className="pt-16"> {/* Отступ сверху, чтобы контент не перекрывался Toolbar */}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/allah-names" element={<AllahNames />} />
+                    <Route path="/salavats" element={<Salavats />} />
+                    <Route path="/istigfars" element={<Istigfars />} />
+                    <Route path="/dua-for-reachness" element={<DuaForReachness />} />
+                    <Route path="/morning-and-evening-azkars" element={<MorningAndEveningAzkars />} />
+                    <Route path="/dua-ismul-azam" element={<DuaIsmulAzam />} />
+                    <Route path="/dua-rasul" element={<DuaRasul />} />
+                    <Route path="/about" element={<About />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+};
+
+export default App;
+
