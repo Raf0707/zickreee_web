@@ -11,12 +11,12 @@ const Toolbar = () => {
                 {/* Логотип и название приложения */}
                 <div className="flex items-center space-x-2">
                     {/* Иконка (увеличена) */}
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-xl sm:text-2xl font-bold">٩٩</span>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-3xl sm:text-5xl font-bold">ذ</span>
                     </div>
                     {/* Название приложения */}
-                    <h2 className="text-[20px] sm:text-[30px] font-bold text-[#86efac]">
-                        Al Asma Ul Husna
+                    <h2 className="text-[25px] sm:text-[30px] font-bold text-[#86efac]">
+                        Zickreee
                     </h2>
                 </div>
 

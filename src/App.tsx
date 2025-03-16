@@ -4,6 +4,7 @@ import AllahNames from "./pages/AllahNames";
 import Salavats from "./pages/Salavats";
 import Istigfars from "./pages/Istigfars";
 import DuaForReachness from "./pages/DuaForReachness";
+import DuaFromQuran from "./pages/DuaFromQuran";
 import MorningAndEveningAzkars from "./pages/MorningAndEveningAzkars";
 import DuaIsmulAzam from "./pages/DuaIsmulAzam";
 import DuaRasul from "./pages/DuaRasul";
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/morning-and-evening-azkars" element={<MorningAndEveningAzkars />} />
                     <Route path="/dua-ismul-azam" element={<DuaIsmulAzam />} />
                     <Route path="/dua-rasul" element={<DuaRasul />} />
+                    <Route path="/dua-from-quran" element={<DuaFromQuran />} />
                     <Route path="/about" element={<About />} />
                 </Routes>
             </div>

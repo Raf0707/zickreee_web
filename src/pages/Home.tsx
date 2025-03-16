@@ -27,7 +27,7 @@ const Home = () => {
                         onClick={() => navigate(card.path)}
                     >
                         {/* Заголовок карточки */}
-                        <h3 className="text-[48px] sm:text-[70px] font-bold text-[#86efac] text-center w-full">
+                        <h3 className="text-[28px] sm:text-[40px] font-bold text-[#86efac] text-center w-full">
                             {card.title}
                         </h3>
                     </div>
