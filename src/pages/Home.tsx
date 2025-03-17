@@ -14,6 +14,10 @@ const Home = () => {
         { title: "Утренние и вечерние азкары", path: "/morning-and-evening-azkars" },
         { title: "Дуа исмуль А'зам", path: "/dua-ismul-azam" },
         { title: "72 дуа Пророка Мухаммада Салля Ллаху алейхи уа Саллям", path: "/dua-rasul" },
+        { title: "Дуа и зикры после намаза", path: "/dua-after-namaz" },
+        { title: "33 аята защиты Аль-Хирз", path: "/hirz" },
+        { title: "Рукъя - лечение аятами Корана", path: "/rukia" },
+        { title: "Дуа и зикры на каждый день", path: "/every-day" },
     ];
 
     return (

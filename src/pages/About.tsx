@@ -1,6 +1,5 @@
 // src/pages/AboutApp.tsx
 import { useState } from "react";
-//import { useNavigate } from "react-router-dom";
 import {
     FaAndroid,
     FaApple,
@@ -12,21 +11,20 @@ import {
     FaStar,
     FaVk,
     FaTelegram,
-    //FaCogs,
+    FaBalanceScale, // Иконка для лицензии
+    FaShieldAlt, // Иконка для политики приватности
+    FaShareAlt, // Иконка для "Поделиться приложением"
 } from "react-icons/fa"; // Иконки из react-icons
 
 const AboutApp = () => {
     const [isVersionDialogOpen, setVersionDialogOpen] = useState(false);
     const [isDownloadIosDialogOpen, setDownloadIosDialogOpen] = useState(false);
-    {/*const navigate = useNavigate();*/}
 
     const openVersionDialog = () => setVersionDialogOpen(true);
     const closeVersionDialog = () => setVersionDialogOpen(false);
 
     const openDownloadIosDialog = () => setDownloadIosDialogOpen(true);
     const closeDownloadIosDialog = () => setDownloadIosDialogOpen(false);
-
-    {/*const goToSettings = () => navigate("/settings");*/}
 
     return (
         <div className="min-h-screen bg-[#122428] flex flex-col items-center justify-center overflow-y-auto w-screen">
@@ -36,18 +34,17 @@ const AboutApp = () => {
                 <div className="w-full border border-[#14442e] rounded-xl p-12 bg-[#122428] text-center">
                     {/* Заголовок с логотипом */}
                     <div className="flex items-center justify-center space-x-2 mb-4">
-                        {/* Логотип */}
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center">
-                            <span className="text-white text-xl sm:text-2xl font-bold">٩٩</span>
-                        </div>
+
                         {/* Название приложения */}
-                        <h2 className="text-[28px] font-bold text-[#86efac]">Al Asma Ul Husna</h2>
+                        <h2 className="text-[25px] sm:text-[30px] font-bold text-[#86efac]">
+                            Zickreee
+                        </h2>
                     </div>
                     {/* Подзаголовок */}
                     <p className="text-xl sm:text-2xl text-[#4ade80]">from R&R</p>
                 </div>
 
-                {/* Карточка для каждого элемента */}
+                {/* Карточка для версии */}
                 <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={openVersionDialog}>
                     <div className="flex items-center justify-center space-x-4">
                         <FaInfoCircle size={24} className="text-[#22c55e]" />
@@ -55,7 +52,24 @@ const AboutApp = () => {
                     </div>
                 </div>
 
-                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://github.com/Raf0707/Al_Asma_Ul_Husna_WEB", "_blank")}>
+                {/* Карточка для лицензии */}
+                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://github.com/Raf0707/zickreee_web/blob/master/LICENSE.md", "_blank")}>
+                    <div className="flex items-center justify-center space-x-4">
+                        <FaBalanceScale size={24} className="text-[#22c55e]" />
+                        <p className="text-xl sm:text-2xl text-[#4ade80]">Лицензия</p>
+                    </div>
+                </div>
+
+                {/* Карточка для политики приватности */}
+                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://github.com/jobsow/raf_console_website/blob/main/Privacy%20Policy.md", "_blank")}>
+                    <div className="flex items-center justify-center space-x-4">
+                        <FaShieldAlt size={24} className="text-[#22c55e]" />
+                        <p className="text-xl sm:text-2xl text-[#4ade80]">Политика приватности</p>
+                    </div>
+                </div>
+
+                {/* Остальные карточки */}
+                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://github.com/Raf0707/zickreee_web", "_blank")}>
                     <div className="flex items-center justify-center space-x-4">
                         <FaCode size={24} className="text-[#22c55e]" />
                         <p className="text-xl sm:text-2xl text-[#4ade80]">Исходный код</p>
@@ -69,7 +83,7 @@ const AboutApp = () => {
                     </div>
                 </div>
 
-                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://www.rustore.ru/catalog/app/ru.tabiin.alasmaulhusna", "_blank")}>
+                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://www.rustore.ru/catalog/app/raf.console.zickreee", "_blank")}>
                     <div className="flex items-center justify-center space-x-4">
                         <FaAndroid size={24} className="text-[#22c55e]" />
                         <p className="text-xl sm:text-2xl text-[#4ade80]">Скачать на Android</p>
@@ -97,7 +111,7 @@ const AboutApp = () => {
                     </div>
                 </div>
 
-                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://www.rustore.ru/catalog/app/ru.tabiin.alasmaulhusna", "_blank")}>
+                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://www.rustore.ru/catalog/app/raf.console.zickreee", "_blank")}>
                     <div className="flex items-center justify-center space-x-4">
                         <FaStar size={24} className="text-[#22c55e]" />
                         <p className="text-xl sm:text-2xl text-[#4ade80]">Оценить приложение</p>
@@ -125,12 +139,13 @@ const AboutApp = () => {
                     </div>
                 </div>
 
-                {/*<div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={goToSettings}>
+                {/* Карточка для "Поделиться приложением" */}
+                <div className="w-full border border-[#14442e] rounded-xl p-6 bg-[#122428] text-center cursor-pointer" onClick={() => window.open("https://raf0707.github.io/zickreee_web", "_blank")}>
                     <div className="flex items-center justify-center space-x-4">
-                        <FaCogs size={24} className="text-[#22c55e]" />
-                        <p className="text-xl sm:text-2xl text-[#4ade80]">Настройки</p>
+                        <FaShareAlt size={24} className="text-[#22c55e]" />
+                        <p className="text-xl sm:text-2xl text-[#4ade80]">Поделиться приложением</p>
                     </div>
-                </div>*/}
+                </div>
             </div>
 
             {/* Диалоговое окно для версии */}
@@ -202,7 +217,6 @@ const AboutApp = () => {
                     </div>
                 </div>
             )}
-
         </div>
     );
 };

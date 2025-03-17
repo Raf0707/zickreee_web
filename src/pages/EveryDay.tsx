@@ -1,28 +1,33 @@
-// src/pages/Salavats.tsx
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import duaData from "../data/72_dua_proroka_mir_emu.json";
-import {AnimatePresence, motion} from "framer-motion"; // Импортируем JSON с данными
+import duaData from "../data/every_day.json";
+import { AnimatePresence, motion } from "framer-motion"; // Импортируем JSON с данными
 
-interface DuaRasulData {
+interface EveryDayData {
+    day: string; // Добавляем поле для дня недели
     arabic_dua: string;
     transcript: string;
     translate: string;
 }
 
-const DuaRasul = () => {
+const EveryDay = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <div className="min-h-screen bg-[#122428] flex flex-col items-center justify-center overflow-y-auto w-screen">
             {/* Список салаватов */}
             <div className="w-full sm:w-screen space-y-4 px-4 sm:px-12 py-6">
-                {duaData.map((item: DuaRasulData, index: number) => (
+                {duaData.map((item: EveryDayData, index: number) => (
                     <div
                         key={index}
                         className="w-full border border-[#14442e] rounded-xl p-4 bg-[#122428] text-center cursor-pointer"
                         onClick={() => setOpenIndex(openIndex === index ? null : index)} // Обработчик клика на всю карточку
                     >
+                        {/* Заголовок дня недели */}
+                        <h2 className="text-[34px] sm:text-[50px] font-bold text-[#86efac] mb-4">
+                            {item.day}
+                        </h2>
+
                         {/* Арабский текст дуа */}
                         <h3 className="text-[28px] sm:text-[40px] font-bold text-[#86efac] text-center w-full">
                             {item.arabic_dua}
@@ -66,4 +71,4 @@ const DuaRasul = () => {
         </div>
     );
 };
-export default DuaRasul;
+export default EveryDay;

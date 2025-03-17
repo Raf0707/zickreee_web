@@ -1,23 +1,23 @@
 // src/pages/Salavats.tsx
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import duaData from "../data/72_dua_proroka_mir_emu.json";
+import duaData from "../data/dua_after_namaz.json";
 import {AnimatePresence, motion} from "framer-motion"; // Импортируем JSON с данными
 
-interface DuaRasulData {
+interface AfterNamazData {
     arabic_dua: string;
     transcript: string;
     translate: string;
 }
 
-const DuaRasul = () => {
+const AfterNamaz = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <div className="min-h-screen bg-[#122428] flex flex-col items-center justify-center overflow-y-auto w-screen">
             {/* Список салаватов */}
             <div className="w-full sm:w-screen space-y-4 px-4 sm:px-12 py-6">
-                {duaData.map((item: DuaRasulData, index: number) => (
+                {duaData.map((item: AfterNamazData, index: number) => (
                     <div
                         key={index}
                         className="w-full border border-[#14442e] rounded-xl p-4 bg-[#122428] text-center cursor-pointer"
@@ -66,4 +66,4 @@ const DuaRasul = () => {
         </div>
     );
 };
-export default DuaRasul;
+export default AfterNamaz;

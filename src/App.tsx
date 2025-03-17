@@ -10,6 +10,10 @@ import DuaIsmulAzam from "./pages/DuaIsmulAzam";
 import DuaRasul from "./pages/DuaRasul";
 import Toolbar from "./components/Toolbar.tsx";
 import About from "./pages/About.tsx";
+import AfterNamaz from "./pages/AfterNamaz.tsx";
+import Hirz from "./pages/Hirz.tsx";
+import Rukia from "./pages/Rukia.tsx";
+import EveryDay from "./pages/EveryDay.tsx";
 //import bridge from "@vkontakte/vk-bridge";
 
 // Отправляет событие инициализации нативному клиенту
@@ -31,6 +35,10 @@ const App = () => {
                     <Route path="/morning-and-evening-azkars" element={<MorningAndEveningAzkars />} />
                     <Route path="/dua-ismul-azam" element={<DuaIsmulAzam />} />
                     <Route path="/dua-rasul" element={<DuaRasul />} />
+                    <Route path="/dua-after-namaz" element={<AfterNamaz />} />
+                    <Route path="/hirz" element={<Hirz />} />
+                    <Route path="/rukia" element={<Rukia />} />
+                    <Route path="/every-day" element={<EveryDay />} />
                     <Route path="/dua-from-quran" element={<DuaFromQuran />} />
                     <Route path="/about" element={<About />} />
                 </Routes>
