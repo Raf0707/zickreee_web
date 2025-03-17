@@ -21,7 +21,7 @@ import EveryDay from "./pages/EveryDay.tsx";
 
 const App = () => {
     return (
-        <Router /*basename="/zickreee_web"*/> {/* Добавил basename */}
+        <Router basename="/zickreee_web"> {/* Добавил basename */}
             {/* Toolbar отображается на всех экранах */}
             <Toolbar />
             {/* Основной контент */}
